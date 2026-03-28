@@ -12,8 +12,18 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from sweet device
 $(call inherit-product, device/xiaomi/sweet/device.mk)
 
-# Inherit some common Lineage stuff.
+# Inherit some common AxionAOSP stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+
+# AxionAOSP Flags
+AXION_MAINTAINER := K_R_I_S_H_N_A
+AXION_PROCESSOR := Snapdragon™_732G
+AXION_CAMERA_REAR_INFO := 108/64,8,5,2
+AXION_CAMERA_FRONT_INFO := 16
+TARGET_INCLUDE_AXFX := true
+TARGET_ENABLE_BLUR := true
+TARGET_SUPPORTED_REFRESH_RATES := 60,120
+TARGET_INCLUDE_GOOGLE_TELECOMM := false
 
 PRODUCT_NAME := lineage_sweet
 PRODUCT_DEVICE := sweet
